@@ -1,0 +1,201 @@
+{
+    "nav": {
+      "home": "Home",
+      "features": "Features",
+      "modules": "Modules",
+      "video": "Video",
+      "pricing": "Pricing",
+      "faqs": "FAQs",
+      "contact": "Contact",
+      "bookDemo": "Book a Demo",
+      "download": "Download Brochure"
+    },
+    "hero": {
+      "title": "Run your school like clockwork.",
+      "subtitle": "All-in-one School Management System",
+      "description": "Streamline operations, boost efficiency, and enhance communication with our comprehensive platform.",
+      "bookDemo": "Book a Demo",
+      "downloadBrochure": "Download Brochure"
+    },
+    "trust": {
+      "title": "Trusted by leading schools"
+    },
+    "benefits": {
+      "title": "Why Schools Choose CampusFlow",
+      "benefit1": {
+        "title": "Complete Automation",
+        "description": "Eliminate manual processes with intelligent automation for attendance, fees, and reporting."
+      },
+      "benefit2": {
+        "title": "Real-time Communication",
+        "description": "Keep parents, teachers, and students connected with instant notifications and updates."
+      },
+      "benefit3": {
+        "title": "Data-Driven Insights",
+        "description": "Make informed decisions with comprehensive analytics and reporting dashboards."
+      }
+    },
+    "modules": {
+      "title": "Complete School Management Suite",
+      "admissions": {
+        "title": "Admissions",
+        "features": ["Online applications", "Document verification", "Merit list generation"]
+      },
+      "attendance": {
+        "title": "Attendance",
+        "features": ["Smart tracking", "Automated alerts", "Parent notifications"]
+      },
+      "timetable": {
+        "title": "Timetable",
+        "features": ["Drag & drop scheduling", "Conflict detection", "Resource optimization"]
+      },
+      "exams": {
+        "title": "Exams",
+        "features": ["Online assessments", "Grade management", "Result analytics"]
+      },
+      "fees": {
+        "title": "Fees",
+        "features": ["Online payments", "Fee structure setup", "Financial reports"]
+      },
+      "communication": {
+        "title": "Communication",
+        "features": ["Multi-channel messaging", "Broadcast notifications", "Parent portal"]
+      },
+      "analytics": {
+        "title": "Analytics",
+        "features": ["Performance insights", "Custom reports", "Trend analysis"]
+      },
+      "portal": {
+        "title": "Portal",
+        "features": ["Student dashboard", "Parent access", "Teacher interface"]
+      }
+    },
+    "features": {
+      "feature1": {
+        "title": "Automated attendance & smart alerts",
+        "points": [
+          "Biometric and RFID integration",
+          "Real-time parent notifications",
+          "Detailed attendance analytics"
+        ]
+      },
+      "feature2": {
+        "title": "One-click fee reconciliation",
+        "points": [
+          "Multiple payment gateway support",
+          "Automated receipt generation",
+          "Financial reporting dashboard"
+        ]
+      }
+    },
+    "stats": {
+      "students": "50,000+",
+      "studentsLabel": "Students Served",
+      "schools": "500+",
+      "schoolsLabel": "Schools Onboarded",
+      "hours": "10,000+",
+      "hoursLabel": "Hours Saved",
+      "reports": "1M+",
+      "reportsLabel": "Reports Generated"
+    },
+    "video": {
+      "title": "See CampusFlow in Action",
+      "highlights": [
+        "Complete walkthrough of all modules",
+        "Real-world implementation examples",
+        "Success stories from partner schools"
+      ]
+    },
+    "testimonials": {
+      "title": "What Schools Say About Us",
+      "testimonial1": {
+        "text": "CampusFlow transformed our school operations. The automation saved us countless hours and improved our parent communication significantly.",
+        "author": "Dr. Sarah Wilson",
+        "role": "Principal, Greenwood Academy"
+      },
+      "testimonial2": {
+        "text": "The analytics dashboard gives us insights we never had before. We can now make data-driven decisions for our students' success.",
+        "author": "Michael Chen",
+        "role": "IT Director, Riverside School"
+      },
+      "testimonial3": {
+        "text": "Implementation was seamless and the support team is exceptional. Our teachers adapted to the system within days.",
+        "author": "Jennifer Rodriguez",
+        "role": "Administrator, St. Mary's School"
+      }
+    },
+    "pricing": {
+      "title": "Choose Your Plan",
+      "starter": {
+        "title": "Starter",
+        "subtitle": "Perfect for small schools",
+        "price": "$399",
+        "period": "/month",
+        "features": [
+          "Up to 500 students",
+          "Core modules included",
+          "Email support",
+          "Basic reporting",
+          "Parent portal access"
+        ],
+        "cta": "Start Free Trial"
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "subtitle": "For school networks",
+        "price": "$999",
+        "period": "/month",
+        "originalPrice": "$1,299",
+        "features": [
+          "Unlimited students",
+          "All modules included",
+          "24/7 priority support",
+          "Advanced analytics",
+          "Custom integrations",
+          "Dedicated account manager"
+        ],
+        "cta": "Contact Sales"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "How long does implementation take?",
+        "answer": "Most schools are up and running within 2-4 weeks. Our dedicated implementation team ensures a smooth transition with minimal disruption to your operations."
+      },
+      "q2": {
+        "question": "Is training provided for staff?",
+        "answer": "Yes, we provide comprehensive training for all staff members, including administrators, teachers, and support staff. Training is conducted both online and on-site as needed."
+      },
+      "q3": {
+        "question": "Can CampusFlow integrate with existing systems?",
+        "answer": "Absolutely. CampusFlow offers APIs and integration capabilities with most existing school systems, including student information systems, learning management systems, and accounting software."
+      },
+      "q4": {
+        "question": "What about data security and privacy?",
+        "answer": "Data security is our top priority. We use enterprise-grade encryption, secure cloud infrastructure, and comply with all educational privacy regulations including FERPA and GDPR."
+      },
+      "q5": {
+        "question": "Is there a mobile app available?",
+        "answer": "Yes, CampusFlow offers mobile apps for iOS and Android, providing students, parents, and teachers with convenient access to all essential features on the go."
+      }
+    },
+    "footer": {
+      "description": "Empowering schools with intelligent management solutions for the digital age.",
+      "quickLinks": "Quick Links",
+      "product": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "support": "Support",
+      "company": "Company",
+      "aboutUs": "About Us",
+      "careers": "Careers",
+      "blog": "Blog",
+      "newsletter": {
+        "title": "Stay Updated",
+        "placeholder": "Enter your email",
+        "subscribe": "Subscribe"
+      },
+      "copyright": "© 2024 CampusFlow. All rights reserved."
+    }
+  }

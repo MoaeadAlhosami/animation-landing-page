@@ -6,8 +6,63 @@
 
 @layer base {
   :root {
-    /* CampusFlow Color Palette */
-    --background: 217 32% 7%;  /* Deep Navy #0F1218 */
+    /* CampusFlow Light Palette */
+    --background: 0 0% 100%; /* Pure white background */
+    --foreground: 222 47% 11%; /* Slate-900 like */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Brand Primary: keep the same deep blue for contrast in CTAs */
+    --primary: 218 51% 46%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Accents */
+    --accent-amber: 33 100% 64%;
+    --accent-sky: 198 71% 66%;
+    --accent-green: 102 45% 69%;
+
+    /* Neutral very light for subtle tints */
+    --neutral-light: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 20% 40%;
+
+    --accent: 218 51% 46%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 218 51% 46%;
+
+    --radius: 0.75rem;
+
+    /* Gradients - bluish whites to brand */
+    --gradient-main: linear-gradient(135deg, hsl(210, 100%, 98%) 0%, hsl(218, 60%, 48%) 100%);
+    --gradient-alternate: linear-gradient(135deg, hsl(210, 90%, 96%) 0%, hsl(217, 45%, 60%) 100%);
+    --gradient-radial-tl: radial-gradient(ellipse at top left, hsl(210, 100%, 98%) 0%, hsl(210, 90%, 96%) 70%, transparent 100%);
+    --gradient-radial-br: radial-gradient(ellipse at bottom right, hsl(210, 90%, 95%) 0%, hsl(210, 80%, 92%) 70%, transparent 100%);
+
+    /* Shadows tuned for light surfaces */
+    --shadow-glow: 0 0 40px hsl(218, 51%, 46% / 0.25);
+    --shadow-glow-amber: 0 0 40px hsl(33, 100%, 64% / 0.25);
+    --shadow-soft: 0 8px 32px hsl(215, 25%, 80% / 0.45);
+  }
+}
+
+@layer base {
+  .dark {
+    /* Previous dark palette preserved */
+    --background: 217 32% 7%;
     --foreground: 210 40% 98%;
 
     --card: 217 32% 7%;
@@ -16,20 +71,13 @@
     --popover: 217 32% 7%;
     --popover-foreground: 210 40% 98%;
 
-    /* Primary: Deep Blue #3A6CB3 */
     --primary: 218 51% 46%;
     --primary-foreground: 210 40% 98%;
 
-    /* Amber accent #FFB347 */
     --accent-amber: 33 100% 64%;
-    
-    /* Sky Blue #6EC1E4 */
     --accent-sky: 198 71% 66%;
-    
-    /* Fresh Green #A1D490 */
     --accent-green: 102 45% 69%;
 
-    /* Neutral Light #F5F7FA */
     --neutral-light: 220 20% 97%;
 
     --secondary: 217 32% 17%;
@@ -50,13 +98,11 @@
 
     --radius: 0.75rem;
 
-    /* Gradients - Sky Blue to Navy */
     --gradient-main: linear-gradient(135deg, hsl(198, 80%, 62%) 0%, hsl(218, 60%, 28%) 100%);
     --gradient-alternate: linear-gradient(135deg, hsl(198, 70%, 68%) 0%, hsl(217, 45%, 22%) 100%);
     --gradient-radial-tl: radial-gradient(ellipse at top left, hsl(198, 80%, 62%) 0%, hsl(198, 70%, 68%) 70%, transparent 100%);
     --gradient-radial-br: radial-gradient(ellipse at bottom right, hsl(218, 60%, 28%) 0%, hsl(217, 45%, 22%) 70%, transparent 100%);
 
-    /* Shadows */
     --shadow-glow: 0 0 40px hsl(218, 51%, 46% / 0.3);
     --shadow-glow-amber: 0 0 40px hsl(33, 100%, 64% / 0.3);
     --shadow-soft: 0 8px 32px hsl(217, 32%, 7% / 0.4);
@@ -81,9 +127,9 @@
 @layer components {
   /* Glass Card Component */
   .glass-card {
-    @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-lg;
+    @apply backdrop-blur-xl rounded-2xl shadow-soft bg-white/70 border border-black/10 ring-1 ring-black/5 dark:bg-white/5 dark:border-white/10 dark:ring-0;
     backdrop-filter: blur(16px);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100%);
   }
 
   /* Pill Button Component */
@@ -103,11 +149,11 @@
   }
 
   .pill-secondary {
-    @apply pill border border-white/20 text-white bg-white/5 backdrop-blur-sm;
+    @apply pill border text-foreground bg-white/70 border-border backdrop-blur-sm dark:text-white dark:bg-white/5 dark:border-white/20;
   }
 
   .pill-secondary:hover {
-    @apply scale-105 bg-white/10 border-white/30;
+    @apply scale-105 bg-white/80 border-border dark:bg-white/10 dark:border-white/30;
   }
 
   /* Gradient Text */

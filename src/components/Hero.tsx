@@ -24,7 +24,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <span className="text-white text-shadow-glow">
+              <span className="text-foreground text-shadow-glow">
                 {t('hero.title')}
               </span>
             </motion.h1>
@@ -88,7 +88,7 @@ const Hero = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
                 <div className="w-3 h-3 bg-accent-green rounded-full mb-2" />
-                <p className="text-xs text-white font-medium">98% Attendance</p>
+                <p className="text-xs text-foreground font-medium">98% Attendance</p>
               </motion.div>
               
               <motion.div
@@ -97,7 +97,7 @@ const Hero = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               >
                 <div className="w-3 h-3 bg-accent-amber rounded-full mb-2" />
-                <p className="text-xs text-white font-medium">$50K Collected</p>
+                <p className="text-xs text-foreground font-medium">$50K Collected</p>
               </motion.div>
               
               <motion.div
@@ -106,7 +106,7 @@ const Hero = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
               >
                 <div className="w-3 h-3 bg-accent-sky rounded-full mb-2" />
-                <p className="text-xs text-white font-medium">24 Messages</p>
+                <p className="text-xs text-foreground font-medium">24 Messages</p>
               </motion.div>
             </div>
           </motion.div>

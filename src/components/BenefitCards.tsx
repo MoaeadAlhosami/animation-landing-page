@@ -33,7 +33,7 @@ const BenefitCards = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text text-shadow-glow">
             {t('benefits.title')}
           </h2>
         </motion.div>
@@ -59,7 +59,7 @@ const BenefitCards = () => {
                   <Icon className="w-8 h-8 text-white" />
                 </motion.div>
                 
-                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white">
+                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-foreground">
                   {t(`benefits.${benefit.key}.title`)}
                 </h3>
                 

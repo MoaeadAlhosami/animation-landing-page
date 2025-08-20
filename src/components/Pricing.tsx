@@ -29,7 +29,7 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text text-shadow-glow">
             {t('pricing.title')}
           </h2>
         </motion.div>
@@ -67,7 +67,7 @@ const Pricing = () => {
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">
                     {t(`pricing.${plan.key}.title`)}
                   </h3>
                   <p className="text-muted-foreground mb-6">

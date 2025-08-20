@@ -45,7 +45,7 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text text-shadow-glow">
             {t('faq.title')}
           </h2>
         </motion.div>
@@ -68,9 +68,9 @@ const FAQ = () => {
               >
                 <AccordionItem 
                   value={faq} 
-                  className="glass-card px-6 py-2 border-white/10 glow-border"
+                  className="glass-card px-6 py-2 border border-black/10 glow-border"
                 >
-                  <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-white/80 hover:no-underline pointer-events-auto relative z-10 transition-all duration-300 py-3 data-[state=open]:py-6 data-[state=closed]:opacity-80 data-[state=open]:opacity-100">
+                  <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:text-foreground/80 hover:no-underline pointer-events-auto relative z-10 transition-all duration-300 py-3 data-[state=open]:py-6 data-[state=closed]:opacity-90 data-[state=open]:opacity-100">
                     {t(`faq.${faq}.question`)}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground leading-relaxed pb-6">

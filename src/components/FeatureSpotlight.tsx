@@ -49,7 +49,7 @@ const FeatureSpotlight = () => {
                     <Icon className="w-8 h-8 text-white" />
                   </motion.div>
                   
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-white">
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-foreground">
                     {t(`features.${feature.key}.title`)}
                   </h3>
                   
@@ -79,8 +79,8 @@ const FeatureSpotlight = () => {
                   viewport={{ once: true }}
                 >
                   <div className="glass-card p-6 glow-border">
-                    <div className="aspect-video bg-gradient-to-br from-background to-muted rounded-xl flex items-center justify-center">
-                      <Icon className={`w-16 h-16 text-white/30`} />
+                    <div className="aspect-video bg-gradient-to-br from-white to-neutral-light rounded-xl flex items-center justify-center">
+                      <Icon className={`w-16 h-16 text-foreground/30`} />
                     </div>
                     
                     {/* Floating Stats */}
@@ -90,7 +90,7 @@ const FeatureSpotlight = () => {
                       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                     >
                       <div className={`w-3 h-3 bg-gradient-to-br ${feature.gradient} rounded-full mb-2`} />
-                      <p className="text-xs text-white font-medium">
+                      <p className="text-xs text-foreground font-medium">
                         {index === 0 ? '99.2% Accuracy' : '$2.5M Processed'}
                       </p>
                     </motion.div>

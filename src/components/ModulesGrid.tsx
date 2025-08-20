@@ -35,7 +35,7 @@ const ModulesGrid = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text text-shadow-glow">
             {t('modules.title')}
           </h2>
         </motion.div>
@@ -61,7 +61,7 @@ const ModulesGrid = () => {
                   <Icon className={`w-8 h-8 ${module.color}`} />
                 </motion.div>
                 
-                <h3 className="text-lg font-bold mb-3 text-white">
+                <h3 className="text-lg font-bold mb-3 text-foreground">
                   {t(`modules.${module.key}.title`)}
                 </h3>
                 

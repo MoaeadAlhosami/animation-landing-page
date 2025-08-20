@@ -12,20 +12,20 @@ const FloatingShapes = () => {
   const reduceMotion = useReducedMotion();
 
   const getShapeComponent = (type: string, size: number) => {
-    const baseClasses = "absolute opacity-15 blur-sm";
+    const baseClasses = "absolute opacity-30 blur-[2px]";
     
     switch (type) {
       case 'circle':
         return (
           <div 
-            className={`${baseClasses} rounded-full bg-gradient-to-br from-accent-sky to-accent-green`}
+            className={`${baseClasses} rounded-full bg-gradient-to-br from-neutral-light to-white`}
             style={{ width: size, height: size }}
           />
         );
       case 'square':
         return (
           <div 
-            className={`${baseClasses} bg-gradient-to-br from-primary to-accent-amber`}
+            className={`${baseClasses} bg-gradient-to-br from-white to-neutral-light`}
             style={{ width: size, height: size }}
           />
         );

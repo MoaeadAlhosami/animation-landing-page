@@ -27,7 +27,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="relative bg-white/5 backdrop-blur-sm border-t border-white/10">
+    <footer id="contact" className="relative bg-white/60 backdrop-blur-sm border-t border-black/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand & Description */}
@@ -77,20 +77,20 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-semibold text-white mb-6">{t('footer.quickLinks')}</h3>
+            <h3 className="font-semibold text-foreground mb-6">{t('footer.quickLinks')}</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#features" className="text-muted-foreground hover:text-white transition-colors duration-200 underline-animate">
+                <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors duration-200 underline-animate">
                   {t('footer.features')}
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-muted-foreground hover:text-white transition-colors duration-200 underline-animate">
+                <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors duration-200 underline-animate">
                   {t('footer.pricing')}
                 </a>
               </li>
               <li>
-                <a href="#support" className="text-muted-foreground hover:text-white transition-colors duration-200 underline-animate">
+                <a href="#support" className="text-muted-foreground hover:text-foreground transition-colors duration-200 underline-animate">
                   {t('footer.support')}
                 </a>
               </li>
@@ -104,20 +104,20 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-semibold text-white mb-6">{t('footer.company')}</h3>
+            <h3 className="font-semibold text-foreground mb-6">{t('footer.company')}</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="text-muted-foreground hover:text-white transition-colors duration-200 underline-animate">
+                <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors duration-200 underline-animate">
                   {t('footer.aboutUs')}
                 </a>
               </li>
               <li>
-                <a href="#careers" className="text-muted-foreground hover:text-white transition-colors duration-200 underline-animate">
+                <a href="#careers" className="text-muted-foreground hover:text-foreground transition-colors duration-200 underline-animate">
                   {t('footer.careers')}
                 </a>
               </li>
               <li>
-                <a href="#blog" className="text-muted-foreground hover:text-white transition-colors duration-200 underline-animate">
+                <a href="#blog" className="text-muted-foreground hover:text-foreground transition-colors duration-200 underline-animate">
                   {t('footer.blog')}
                 </a>
               </li>
@@ -131,13 +131,13 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-semibold text-white mb-6">{t('footer.newsletter.title')}</h3>
+            <h3 className="font-semibold text-foreground mb-6">{t('footer.newsletter.title')}</h3>
             <div className="space-y-4">
               <div className="flex space-x-2">
                 <Input
                   type="email"
                   placeholder={t('footer.newsletter.placeholder')}
-                  className="glass-card border-white/20 bg-white/5 text-white placeholder:text-muted-foreground"
+                  className="glass-card border-black/10 bg-white/60 text-foreground placeholder:text-muted-foreground"
                 />
                 <Button className="pill-primary px-4">
                   <Mail className="w-4 h-4" />

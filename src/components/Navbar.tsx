@@ -43,7 +43,7 @@ const Navbar = () => {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'backdrop-blur-xl bg-background/80 border-b border-white/10'
+          ? 'backdrop-blur-xl bg-white/70 border-b border-border dark:bg-background/80 dark:border-white/10'
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -58,7 +58,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
           >
             <div className="w-10 h-10 bg-gradient-main rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-lg">CF</span>
+              <span className="text-foreground font-bold text-lg">CF</span>
             </div>
             <span className="text-xl lg:text-2xl font-bold gradient-text">
               CampusFlow

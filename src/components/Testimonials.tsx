@@ -36,7 +36,7 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text text-shadow-glow">
             {t('testimonials.title')}
           </h2>
         </motion.div>
@@ -77,7 +77,7 @@ const Testimonials = () => {
                       </div>
                       
                       <div className="text-left">
-                        <p className="font-semibold text-white">
+                        <p className="font-semibold text-foreground">
                           {t(`testimonials.${testimonial}.author`)}
                         </p>
                         <p className="text-sm text-muted-foreground">
@@ -107,10 +107,10 @@ const Testimonials = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ring-1 ring-black/10 ${
                     index === currentSlide
-                      ? 'bg-gradient-main scale-125'
-                      : 'bg-white/20 hover:bg-white/40'
+                      ? 'bg-primary/90 scale-125'
+                      : 'bg-black/10 hover:bg-black/20'
                   }`}
                 />
               ))}

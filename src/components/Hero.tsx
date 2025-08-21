@@ -5,7 +5,8 @@ import { Play, Download } from 'lucide-react';
 import dashboardMockup from '../../public/assets/dashboard-mockup.jpg';
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center section-pad relative overflow-hidden">
@@ -13,15 +14,16 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <motion.div
-            className="text-center lg:text-left"
+            className={`text-center ${isArabic ? 'lg:text-right' : 'lg:text-left'}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            dir={isArabic ? 'rtl' : 'ltr'}
           >
             <motion.h1
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30, x: isArabic ? 30 : -30 }}
+              animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
               <span className="text-foreground text-shadow-glow">
@@ -31,8 +33,8 @@ const Hero = () => {
             
             <motion.h2
               className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 gradient-text"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, x: isArabic ? 30 : -30 }}
+              animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {t('hero.subtitle')}
@@ -40,26 +42,26 @@ const Hero = () => {
             
             <motion.p
               className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, x: isArabic ? 30 : -30 }}
+              animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               {t('hero.description')}
             </motion.p>
             
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className={`flex flex-col sm:flex-row gap-4 justify-center ${isArabic ? 'lg:justify-end' : 'lg:justify-start'}`}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <Button className="pill-primary text-lg px-8 py-4 h-auto">
-                <Play className="w-5 h-5 mr-2" />
+                <Play className={`w-5 h-5 ${isArabic ? 'ml-2' : 'mr-2'}`} />
                 {t('hero.bookDemo')}
               </Button>
               
               <Button className="pill-secondary text-lg px-8 py-4 h-auto">
-                <Download className="w-5 h-5 mr-2" />
+                <Download className={`w-5 h-5 ${isArabic ? 'ml-2' : 'mr-2'}`} />
                 {t('hero.downloadBrochure')}
               </Button>
             </motion.div>
@@ -75,7 +77,7 @@ const Hero = () => {
             <div className="glass-card p-4 lg:p-8 glow-border">
               <motion.img
                 src={dashboardMockup}
-                alt="CampusFlow Dashboard"
+                alt="Tanween Dashboard"
                 className="w-full h-auto rounded-xl shadow-soft"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}

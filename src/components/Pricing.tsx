@@ -4,7 +4,8 @@ import { Check, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Pricing = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
 
   const plans = [
     {
@@ -89,7 +90,7 @@ const Pricing = () => {
                   </div>
                 </div>
 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8" dir={isArabic ? 'rtl' : 'ltr'}>
                   {(t(`pricing.${plan.key}.features`, { returnObjects: true }) as string[]).map((feature, idx) => (
                     <motion.li
                       key={idx}
@@ -99,8 +100,8 @@ const Pricing = () => {
                       transition={{ duration: 0.5, delay: 0.1 * idx }}
                       viewport={{ once: true }}
                     >
-                      <Check className="w-5 h-5 text-accent-green mt-0.5 mr-3 flex-shrink-0" />
-                      <span className="text-foreground">{feature}</span>
+                      <Check className={`w-5 h-5 text-accent-green mt-0.5 flex-shrink-0 ${isArabic ? 'ml-3' : 'mr-3'}`} />
+                      <span className="text-foreground leading-relaxed">{feature}</span>
                     </motion.li>
                   ))}
                 </ul>

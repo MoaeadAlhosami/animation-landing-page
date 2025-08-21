@@ -5,7 +5,8 @@ import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Testimonials = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const testimonials = ['testimonial1', 'testimonial2', 'testimonial3'];
@@ -35,6 +36,7 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          dir={isArabic ? 'rtl' : 'ltr'}
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text text-shadow-glow">
             {t('testimonials.title')}
@@ -44,9 +46,10 @@ const Testimonials = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative overflow-hidden">
             <motion.div
-              className="flex"
-              animate={{ x: `-${currentSlide * 100}%` }}
+              className="flex carousel-container"
+              animate={{ x: isArabic ? `${currentSlide * 100}%` : `-${currentSlide * 100}%` }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
+              dir={isArabic ? 'rtl' : 'ltr'}
             >
               {testimonials.map((testimonial, index) => (
                 <div key={testimonial} className="w-full flex-shrink-0 px-4">
@@ -65,18 +68,18 @@ const Testimonials = () => {
                       <Quote className="w-8 h-8 text-white" />
                     </motion.div>
                     
-                    <blockquote className="text-lg lg:text-xl text-foreground mb-8 leading-relaxed italic">
+                    <blockquote className={`text-lg lg:text-xl text-foreground mb-8 leading-relaxed ${isArabic ? 'text-right' : 'text-left'} ${isArabic ? '' : 'italic'}`}>
                       "{t(`testimonials.${testimonial}.text`)}"
                     </blockquote>
                     
-                    <div className="flex items-center justify-center space-x-4">
+                    <div className={`flex items-center justify-center ${isArabic ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
                       <div className="w-12 h-12 bg-gradient-alt rounded-full flex items-center justify-center">
                         <span className="text-white font-semibold">
                           {t(`testimonials.${testimonial}.author`).charAt(0)}
                         </span>
                       </div>
                       
-                      <div className="text-left">
+                      <div className={`testimonial-author ${isArabic ? 'text-right' : 'text-left'}`}>
                         <p className="font-semibold text-foreground">
                           {t(`testimonials.${testimonial}.author`)}
                         </p>
@@ -92,22 +95,22 @@ const Testimonials = () => {
           </div>
 
           {/* Navigation */}
-          <div className="flex items-center justify-center mt-8 space-x-4">
+          <div className={`flex items-center justify-center mt-8 ${isArabic ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
             <Button
               variant="ghost"
               size="sm"
-              onClick={prevSlide}
+              onClick={isArabic ? nextSlide : prevSlide}
               className="w-10 h-10 rounded-full glass-card hover:bg-white/10"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-5 h-5 text-foreground" />
             </Button>
             
-            <div className="flex space-x-2">
+            <div className={`flex ${isArabic ? 'gap-2' : 'space-x-2'}`}>
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ring-1 ring-black/10 ${
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ring-1 ring-black/10 flex-shrink-0 ${
                     index === currentSlide
                       ? 'bg-primary/90 scale-125'
                       : 'bg-black/10 hover:bg-black/20'
@@ -119,10 +122,10 @@ const Testimonials = () => {
             <Button
               variant="ghost"
               size="sm"
-              onClick={nextSlide}
+              onClick={isArabic ? prevSlide : nextSlide}
               className="w-10 h-10 rounded-full glass-card hover:bg-white/10"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-5 h-5 text-foreground" />
             </Button>
           </div>
         </div>

@@ -21,7 +21,7 @@
       "title": "Trusted by leading schools"
     },
     "benefits": {
-      "title": "Why Schools Choose CampusFlow",
+      "title": "Why Schools Choose Tanween",
       "benefit1": {
         "title": "Complete Automation",
         "description": "Eliminate manual processes with intelligent automation for attendance, fees, and reporting."
@@ -99,7 +99,7 @@
       "reportsLabel": "Reports Generated"
     },
     "video": {
-      "title": "See CampusFlow in Action",
+      "title": "See Tanween in Action",
       "highlights": [
         "Complete walkthrough of all modules",
         "Real-world implementation examples",
@@ -109,7 +109,7 @@
     "testimonials": {
       "title": "What Schools Say About Us",
       "testimonial1": {
-        "text": "CampusFlow transformed our school operations. The automation saved us countless hours and improved our parent communication significantly.",
+        "text": "Tanween transformed our school operations. The automation saved us countless hours and improved our parent communication significantly.",
         "author": "Dr. Sarah Wilson",
         "role": "Principal, Greenwood Academy"
       },
@@ -168,8 +168,8 @@
         "answer": "Yes, we provide comprehensive training for all staff members, including administrators, teachers, and support staff. Training is conducted both online and on-site as needed."
       },
       "q3": {
-        "question": "Can CampusFlow integrate with existing systems?",
-        "answer": "Absolutely. CampusFlow offers APIs and integration capabilities with most existing school systems, including student information systems, learning management systems, and accounting software."
+        "question": "Can Tanween integrate with existing systems?",
+        "answer": "Absolutely. Tanween offers APIs and integration capabilities with most existing school systems, including student information systems, learning management systems, and accounting software."
       },
       "q4": {
         "question": "What about data security and privacy?",
@@ -177,7 +177,7 @@
       },
       "q5": {
         "question": "Is there a mobile app available?",
-        "answer": "Yes, CampusFlow offers mobile apps for iOS and Android, providing students, parents, and teachers with convenient access to all essential features on the go."
+        "answer": "Yes, Tanween offers mobile apps for iOS and Android, providing students, parents, and teachers with convenient access to all essential features on the go."
       }
     },
     "footer": {
@@ -196,6 +196,6 @@
         "placeholder": "Enter your email",
         "subscribe": "Subscribe"
       },
-      "copyright": "© 2024 CampusFlow. All rights reserved."
+      "copyright": "© 2024 Tanween. All rights reserved."
     }
   }

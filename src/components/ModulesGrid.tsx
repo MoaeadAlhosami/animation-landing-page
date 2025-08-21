@@ -12,7 +12,8 @@ import {
 } from 'lucide-react';
 
 const ModulesGrid = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
 
   const modules = [
     { key: 'admissions', icon: UserPlus, color: 'text-accent-green' },
@@ -34,6 +35,7 @@ const ModulesGrid = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          dir={isArabic ? 'rtl' : 'ltr'}
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text text-shadow-glow">
             {t('modules.title')}
@@ -52,6 +54,7 @@ const ModulesGrid = () => {
                 transition={{ duration: 0.6, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -4 }}
+                dir={isArabic ? 'rtl' : 'ltr'}
               >
                 <motion.div
                   className="mb-4"
@@ -65,11 +68,11 @@ const ModulesGrid = () => {
                   {t(`modules.${module.key}.title`)}
                 </h3>
                 
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-3 text-sm text-muted-foreground">
                   {(t(`modules.${module.key}.features`, { returnObjects: true }) as string[]).map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-accent-sky rounded-full mt-2 mr-2 flex-shrink-0" />
-                      {feature}
+                      <span className={`w-2 h-2 bg-accent-sky rounded-full mt-1.5 flex-shrink-0 ${isArabic ? 'ml-3' : 'mr-3'}`} />
+                      <span className="flex-1 leading-relaxed">{feature}</span>
                     </li>
                   ))}
                 </ul>

@@ -4,7 +4,8 @@ import { Play, Check } from 'lucide-react';
 import { useState } from 'react';
 
 const VideoShowcase = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
@@ -91,6 +92,7 @@ const VideoShowcase = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
+            dir={isArabic ? 'rtl' : 'ltr'}
           >
             <ul className="space-y-6">
               {(t('video.highlights', { returnObjects: true }) as string[]).map((highlight, index) => (
@@ -103,7 +105,7 @@ const VideoShowcase = () => {
                   viewport={{ once: true }}
                 >
                   <motion.div
-                    className="w-8 h-8 bg-gradient-main rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0"
+                    className={`w-8 h-8 bg-gradient-main rounded-full flex items-center justify-center mt-1 flex-shrink-0 ${isArabic ? 'ml-4' : 'mr-4'}`}
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >

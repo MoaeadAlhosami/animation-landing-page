@@ -40,49 +40,51 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'backdrop-blur-xl bg-white/70 border-b border-border dark:bg-background/80 dark:border-white/10'
-          : 'bg-transparent'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+         <motion.nav
+       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+         isScrolled
+           ? 'backdrop-blur-xl bg-white/70 border-b border-border dark:bg-background/80 dark:border-white/10'
+           : 'bg-transparent'
+       }`}
+       dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
+       initial={{ y: -100 }}
+       animate={{ y: 0 }}
+       transition={{ duration: 0.5 }}
+     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <motion.div
-            className="flex items-center space-x-3"
-            whileHover={{ scale: 1.05 }}
-          >
-            <div className="w-10 h-10 bg-gradient-main rounded-xl flex items-center justify-center">
-              <span className="text-foreground font-bold text-lg">CF</span>
-            </div>
-            <span className="text-xl lg:text-2xl font-bold gradient-text">
-              CampusFlow
-            </span>
-          </motion.div>
+                 <div className="flex items-center justify-between h-16 lg:h-20 gap-4">
+                     {/* Logo */}
+           <motion.div
+             className="flex items-center gap-3"
+             whileHover={{ scale: 1.05 }}
+           >
+             <div className="w-10 h-10 bg-gradient-main rounded-xl flex items-center justify-center">
+               <span className="text-foreground font-bold text-lg">T</span>
+             </div>
+             <span className="text-xl lg:text-2xl font-bold gradient-text">
+               Tanween
+             </span>
+           </motion.div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.key}
-                href={item.href}
-                className="text-foreground hover:text-white transition-colors duration-200 underline-animate font-medium"
-              >
-                {t(`nav.${item.key}`)}
-              </a>
-            ))}
-          </div>
+                     {/* Desktop Navigation */}
+           <div className="hidden lg:flex items-center gap-8">
+             {navItems.map((item) => (
+               <a
+                 key={item.key}
+                 href={item.href}
+                 className="text-foreground hover:text-transparent hover:bg-gradient-to-r hover:from-accent-amber hover:to-primary hover:bg-clip-text transition-all duration-300 font-medium relative group whitespace-nowrap px-2 py-1"
+               >
+                 {t(`nav.${item.key}`)}
+                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-amber to-primary transition-all duration-300 group-hover:w-full rounded-full"></span>
+               </a>
+             ))}
+           </div>
 
-          {/* Desktop CTAs & Language Switcher */}
-          <div className="hidden lg:flex items-center space-x-4">
+                     {/* Desktop CTAs & Language Switcher */}
+           <div className="hidden lg:flex items-center gap-4">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="text-foreground">
+                <Button variant="ghost" size="sm" className="text-foreground focus:outline-none focus:ring-0 focus:ring-offset-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0">
                   <Globe className="w-4 h-4 mr-2" />
                   {i18n.language.toUpperCase()}
                   <ChevronDown className="w-4 h-4 ml-2" />
@@ -120,20 +122,20 @@ const Navbar = () => {
           >
             <div className="space-y-4 px-4 py-4">
               {navItems.map((item) => (
-                <a
-                  key={item.key}
-                  href={item.href}
-                  className="block text-foreground hover:text-white transition-colors duration-200"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {t(`nav.${item.key}`)}
-                </a>
+                                 <a
+                   key={item.key}
+                   href={item.href}
+                   className="block text-foreground hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-white/10"
+                   onClick={() => setIsMobileMenuOpen(false)}
+                 >
+                   {t(`nav.${item.key}`)}
+                 </a>
               ))}
               
               <div className="pt-4 border-t border-white/10 space-y-3">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="sm" className="w-full justify-start text-foreground">
+                    <Button variant="ghost" size="sm" className="w-full justify-start text-foreground focus:outline-none focus:ring-0 focus:ring-offset-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0">
                       <Globe className="w-4 h-4 mr-2" />
                       {i18n.language.toUpperCase()}
                       <ChevronDown className="w-4 h-4 ml-auto" />
